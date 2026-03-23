@@ -1,0 +1,152 @@
+@use "constants" as *;
+@use "mixins" as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-white;
+  color: $color-black;
+  margin: 0;
+  min-height: 100vh;
+  height: 100%;
+  padding: 0;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 96px;
+  display: flex;
+  flex-direction: column;
+  font-family: $ff-dm-sans;
+
+  @media (max-width: 1200px) {
+    padding: 0 40px;
+  }
+
+  @include vp-767 {
+    padding: 0 16px;
+  }
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+textarea {
+  overflow: auto;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.h2 {
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 43px;
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+/* hidden classes */
+.hidden-mobile {
+  display: block;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.visible-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+/* form elements */
+.input {
+  font-size: 14px;
+  line-height: 22px;
+  background-color: $color-white;
+  border: none;
+  border-bottom: 1px solid $color-gray-light;
+  width: 100%;
+  padding: 0 28px 11px 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.select {
+  font-size: 14px;
+  line-height: 22px;
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  border-radius: 4px;
+  padding: 14px 13px;
+  appearance: none;
+  background: url("../../assets/sprite/arrow-in-select.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 8px;
+  background-position-x: 95%;
+  background-position-y: 50%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* выкл скролл при открытых модальных окнах */
+body.open-modal-window {
+  @include vp-767 {
+    overflow: hidden;
+  }
+}
+
+/* выкл скролл при открытии корзины */
+body.open-basket {
+  overflow: hidden;
+  padding-right: 15px;
+
+  @include vp-767 {
+    padding-right: 0;
+  }
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}

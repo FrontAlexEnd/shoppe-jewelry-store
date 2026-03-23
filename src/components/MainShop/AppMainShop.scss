@@ -1,0 +1,201 @@
+.main-shop {
+    margin: 0 0 200px;
+
+    @include vp-767 {
+        margin: 0 0 25px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 39px;
+
+        @include vp-767 {
+            margin: 0 0 14px;
+        }
+    }
+
+    &__link {
+        color: $color-gold;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+
+        @include vp-767 {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4.4%;
+        row-gap: 82px;
+        justify-content: space-between;
+
+        @include vp-767 {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 23px 16px;
+        }
+
+        &-card {
+            width: 100%;
+
+            @include vp-767 {
+                &:nth-child(n+5) {
+                    display: none;
+                }
+            }
+
+            &-not-avaliable {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $color-dark-gray;
+                padding: 12px 18px;
+                white-space: nowrap;
+                border-radius: 0 0 8px 8px;
+                max-width: 80%;
+                text-align: center;
+                color: white;
+
+                @include vp-767 {
+                    font-size: 12px;
+                }
+            }
+
+            .img-wrapper {
+                position: relative;
+                display: flex;
+                border-radius: 8px;
+                margin: 0 0 27px;
+                overflow: hidden;
+
+                @include vp-767 {
+                    margin: 0 0 6px;
+                    border-radius: 4px;
+                }
+
+                &__sale-tag {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+
+                &__overlay {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-white;
+                    border-radius: inherit;
+                    opacity: 0;
+                    transition: opacity $transition-fast-easy;
+                }
+
+                &:hover .img-wrapper__overlay {
+                    opacity: 0.6;
+                }
+
+                &__sale-tag {
+                    position: absolute;
+                    top: 16px;
+                    left: 16px;
+                    color: $color-white;
+                    background-color: $color-gold;
+                    border-radius: 4px;
+                    padding: 2px 8px 2px 8px;
+                    transition: opacity $transition-fast-easy;
+
+                    @include vp-767 {
+                        top: 4px;
+                        left: 4px;
+                        padding: 2px 6px;
+                    }
+                }
+
+                &__image {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1;
+                }
+
+                &__button {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    border-radius: 0 0 2px 2px;
+                    text-transform: uppercase;
+                    font-size: 8.2px;
+                }
+
+                &__desktop-actions {
+                    position: absolute;
+                    z-index: 2;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+
+                    display: flex;
+                    gap: 30px;
+                    opacity: 0;
+                    transition: opacity $transition-fast-easy;
+
+                    @include vp-767 {
+                        display: none;
+                    }
+                }
+
+                &:hover .img-wrapper__desktop-actions {
+                    opacity: 1;
+                }
+            }
+
+            &-title {
+                font-size: 20px;
+                line-height: 26px;
+                margin: 0 0 16px;
+
+                @include vp-767 {
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin: 0 0 4px;
+                }
+
+            }
+
+            &-pricing {
+                display: flex;
+                gap: 10px;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+
+                @include vp-767 {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+
+                &--crossed {
+                    color: $color-red;
+                }
+
+                &--accent {
+                    color: $color-gold;
+                }
+            }
+        }
+    }
+}
