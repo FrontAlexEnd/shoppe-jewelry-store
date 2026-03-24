@@ -1,0 +1,205 @@
+.catalog {
+  margin: 0 0 80px;
+
+  @include vp-767 {
+    margin: 0 0 50px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 40px;
+
+    @include vp-767 {
+      align-items: start;
+      row-gap: 15px;
+      flex-direction: column;
+      margin: 0 0 14px;
+    }
+
+    &-filters-btn {
+      display: none;
+
+      @include vp-767 {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        color: $color-gold;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 36px;
+
+    &-wrapper {
+      flex-grow: 1;
+      width: 100%;
+      max-width: 948px;
+
+      .catalog__body-grid {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        column-gap: 24px;
+        row-gap: 73px;
+        width: 100%;
+        margin: 0 0 140px;
+
+        @include vp-767 {
+          gap: 24px 15px;
+          grid-template-columns: 1fr 1fr;
+          margin: 0;
+        }
+
+        &-card {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          max-width: 300px;
+
+          @include vp-767 {
+            max-width: unset;
+          }
+
+          &-not-avaliable {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $color-dark-gray;
+            padding: 12px 18px;
+            white-space: nowrap;
+            border-radius: 0 0 8px 8px;
+            max-width: 80%;
+            text-align: center;
+            color: white;
+
+            @include vp-767 {
+              font-size: 12px;
+            }
+          }
+
+          .img-wrapper {
+            position: relative;
+            display: flex;
+            border-radius: 8px;
+            margin: 0 0 24px;
+
+            @include vp-767 {
+              margin: 0 0 4px;
+            }
+
+            &__overlay {
+              content: "";
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: $color-white;
+              border-radius: inherit;
+              opacity: 0;
+              transition: opacity $transition-fast-easy;
+            }
+
+            &:hover .img-wrapper__overlay {
+              opacity: 0.6;
+            }
+
+            &__sale-tag {
+              position: absolute;
+              top: 5%;
+              left: 5%;
+              color: $color-white;
+              background-color: $color-gold;
+              border-radius: 4px;
+              padding: 2px 8px;
+              transition: opacity $transition-fast-easy;
+
+              p {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+              }
+            }
+
+            &__image {
+              width: 100%;
+              height: auto;
+              aspect-ratio: 1;
+              border-radius: 8px;
+            }
+
+            &__button {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              padding: 11px 10px;
+              font-size: 8px;
+              height: 33px;
+              border-radius: 0 0 4px 4px;
+            }
+
+            &__desktop-actions {
+              position: absolute;
+              z-index: 2;
+              top: 50%;
+              left: 50%;
+              translate: -50% -50%;
+              display: flex;
+              gap: 30px;
+              opacity: 0;
+              transition: opacity $transition-fast-easy;
+
+              @include vp-767 {
+                display: none;
+              }
+            }
+
+            &:hover .img-wrapper__desktop-actions {
+              opacity: 1;
+            }
+          }
+
+          &-title {
+            font-size: 20px;
+            line-height: 26px;
+            margin: 0 0 18px;
+
+            @include vp-767 {
+              font-size: 14px;
+              line-height: 22px;
+              margin: 0 0 4px;
+            }
+          }
+
+          &-pricing {
+            display: flex;
+            column-gap: 10px;
+
+            @include vp-767 {
+              font-size: 12px;
+              line-height: 20px;
+            }
+
+            &--crossed {
+              color: $color-red;
+            }
+
+            &--accent {
+              color: $color-gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

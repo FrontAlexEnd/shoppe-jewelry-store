@@ -1,0 +1,53 @@
+.footer {
+    display: flex;
+    border-top: 1px solid $color-light-gray;
+    justify-content: space-between;
+    align-items: center;
+    padding: 58px 0 58px;
+    margin-top: auto;
+
+    @include vp-767 {
+        border: none;
+        flex-direction: row-reverse;
+        padding: 0 0 20px;
+    }
+
+    &__copyright {
+        font-size: 16px;
+        line-height: 27px;
+
+        @include vp-767 {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    &__network {
+        &-list {
+            display: flex;
+            column-gap: 28px;
+
+            @include vp-767 {
+                gap: 11px;
+                max-height: 12px;
+            }
+        }
+
+        &-link-icon {
+            color: $color-dark-gray;
+            max-height: 18px;
+            max-width: 18px;
+            width: 100%;
+            display: block;
+
+            @include vp-767 {
+                max-height: 12px;
+                max-width: 14px;
+            }
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+}
