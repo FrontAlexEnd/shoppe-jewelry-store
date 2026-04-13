@@ -1,11 +1,17 @@
-> > [!NOTE] # 💎 Shoppe Jewelry Store
-
+> [!Tip] 
+> ### 💎 Shoppe Jewelry Store
 > ### Современный интернет-магазин ювелирных изделий
-> ### Jewelry store application | Vue 3 + TS + Pinia + Vite + SCSS
+> 
+> ### Стек: Vue 3, TS, Pinia, Vite, SCSS. 
+>
+> 🔘 **SPA-приложение (vue-router) с дизайном под любые устройства** 
+> 🔘 **Функционал добавления товаров в корзину, сохранением данных в localStorage** 
+> 🔘 **Избранные товары, которые хранятся на бекенде (strapi)**
+> 🔘 **Страница каждого товара с уникальным описанием и реальными отзывами**
 
 
 > [!IMPORTANT]
 > Backlog:
-- [x] TS
-- [ ] Nuxt, SSR
-- [ ] Reviews, filters
+> - ✔️ TS
+> - ✖️ Nuxt
+> - ✖️ Reviews, filters
