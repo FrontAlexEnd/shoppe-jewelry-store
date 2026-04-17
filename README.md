@@ -1,7 +1,6 @@
-# ([💎 Shoppe Jewelry Store](https://frontalexend.github.io/shoppe-jewelry-store/))
+# [<u>💎 Shoppe Jewelry Store</u>](https://frontalexend.github.io/shoppe-jewelry-store/)
 > [!Tip] 
 > ### Статус: legacy-рефакторинг. Проект написан в 2024 г. с целью демонстрации знаний стека, на котором работал ранее.
-> ### Современный интернет-магазин ювелирных изделий
 > 
 > ### Стек: Vue 3, TS, Pinia, Vite, SCSS. 
 >
