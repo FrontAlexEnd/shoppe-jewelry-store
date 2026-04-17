@@ -15,7 +15,7 @@
     "module": "ESNext", 
     "moduleResolution": "Bundler", /* работает по правилам сборщика */
     "target": "esnext",
-    "types": [],
+    "types": ["vite/client"] ,
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
