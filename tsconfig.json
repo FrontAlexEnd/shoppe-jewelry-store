@@ -1,32 +1,18 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-        "@public/*": [ "public/*"],
-        "@/*": [ "src/*"],
-        "@assets/*": [ "src/assets/*" ],
-        "@components/*": [ "src/components/*" ],
-        "@composables/*": [ "src/composables/*" ],
-        "@helpers/*": [ "src/helpers/*" ],
-        "@ts-types/*": [ "src/types/*" ],
-        "@stores/*": [ "src/stores/*" ],
-        "@styles/*": [ "src/styles/*" ],
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "files": [],
+  "references": [
+    {
+      "path": "./.nuxt/tsconfig.app.json"
     },
-    "module": "ESNext", 
-    "moduleResolution": "Bundler", /* работает по правилам сборщика */
-    "target": "esnext",
-    "types": ["vite/client"] ,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    // Recommended Options
-    "strict": true, /* запрет any по умолчанию, строгую проверку на null и undefined и прочее */
-    "verbatimModuleSyntax": true, /* заставляет явно разделять импорт типов и импорт значений (используя import type ...). Гарантирует, что лишний код не попадет в итоговую сборку */
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+    {
+      "path": "./.nuxt/tsconfig.server.json"
+    },
+    {
+      "path": "./.nuxt/tsconfig.shared.json"
+    },
+    {
+      "path": "./.nuxt/tsconfig.node.json"
+    }
+  ]
 }

@@ -1,20 +1,75 @@
-# [<u>💎 Shoppe Jewelry Store</u>](https://frontalexend.github.io/shoppe-jewelry-store/)
-> [!Tip] 
-> ### Статус: legacy-рефакторинг. Проект написан в 2024 г. с целью демонстрации знаний стека, на котором работал ранее.
-> 
-> ### Посмотреть сайт: https://frontalexend.github.io/shoppe-jewelry-store
->
-> ### Стек: Vue 3, TS, Pinia, Vite, SCSS. 
->
-> 🔘 **SPA-приложение (vue-router) с дизайном под любые устройства** <br>
-> 🔘 **Функционал добавления товаров в корзину, сохранением данных в localStorage** <br>
-> 🔘 **Избранные товары, которые хранятся на бекенде (strapi)** <br>
-> 🔘 **Страница каждого товара с уникальным описанием и реальными отзывами** <br>
->
+# Nuxt Minimal Starter
 
-> [!IMPORTANT]
-> ### BACKLOG:
-> - ✔️ Внедрение TS
-> - 🔄 Миграция на Nuxt
-> - 🔄 Рефакторинг архитектуры и оптимизация старого кода
-> - ✖️ Полноценная система фильтрации и отзывов
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+## Setup
+
+Make sure to install dependencies:
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
