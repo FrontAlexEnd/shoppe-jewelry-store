@@ -1,0 +1,1 @@
+{"root":["./app.vue","./eslint.config.js","./nuxt.config.ts","./stylelint.config.mjs","./components/catalog/api/updatefavoritestatus.ts","./pages/index.vue","./pages/catalog/index.vue","./pages/product/[id].vue","./shared/helpers/constants.ts","./shared/helpers/fetchapi.ts","./.nuxt/nuxt.d.ts"],"errors":true,"version":"6.0.3"}

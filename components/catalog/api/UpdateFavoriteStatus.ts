@@ -1,4 +1,4 @@
-export async function apiUpdateFavoriteStatus(productId: string, isFavorite: boolean): Promise<boolean> {
+export async function updateFavoriteStatus(productId: string, isFavorite: boolean): Promise<boolean> {
     let status = true
 
     try {
@@ -20,5 +20,3 @@ export async function apiUpdateFavoriteStatus(productId: string, isFavorite: boo
         return status
     }
 }
-
-

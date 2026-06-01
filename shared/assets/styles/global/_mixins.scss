@@ -1,0 +1,19 @@
+@use "constants" as *;
+
+@mixin vp-1000 { 
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin vp-767 {
+    @media (max-width: $vp-mobile) {
+        @content;
+    }
+}
+
+@mixin min-width-768 {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
