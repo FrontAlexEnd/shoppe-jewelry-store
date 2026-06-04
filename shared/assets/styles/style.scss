@@ -1,3 +1,7 @@
 /* global */
 @use "global/index";
 
+/* components */
+@use "~/shared/assets/styles/components/buttons";
+@use "~/shared/assets/styles/components/transition";
+@use "~/shared/assets/styles/components/overlay";

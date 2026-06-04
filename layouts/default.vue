@@ -9,10 +9,6 @@
 </template>
 
 <style lang='scss'>
-@use "~/shared/assets/styles/components/buttons";
-@use "~/shared/assets/styles/components/transition";
-@use "~/shared/assets/styles/components/overlay";
-
 .default-layout {
     box-sizing: border-box;
   position: relative;
