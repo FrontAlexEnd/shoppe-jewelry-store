@@ -1,7 +1,3 @@
-import { DataAction, LIMIT_TEXT } from '@helpers/constants'
-import type { BasketEvents } from '@ts-types/index'
-import type { Product, CartProduct } from '@ts-types/product'
-
 export const useBasketStore = defineStore('basketStore', () => {
     const products = ref<CartProduct[]>([])
     let productsInLocalStorage: CartProduct[]

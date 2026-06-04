@@ -7,6 +7,10 @@ export default defineNuxtConfig({
     },
     '~/components'
   ],
+    css: [
+    // Используем относительную точку от корня проекта
+    './shared/assets/styles/style.scss' 
+  ],
 
   /* автоимпорты: */
   imports: {
@@ -15,20 +19,20 @@ export default defineNuxtConfig({
       './shared/helpers/**', /* ** - отслеживать папку на любую глубину */
       './shared/composables/**',
       './shared/stores/**',
+      './shared/types/',
     ]
   },
-
   vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `
-            @use "~/shared/assets/styles/global/_constants.scss" as *;
-            @use "~/shared/assets/styles/global/_mixins.scss" as *;
-          `
-        }
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "~/shared/assets/styles/global/_constants.scss" as *;
+          @use "~/shared/assets/styles/global/_mixins.scss" as *;
+        `
       }
-    },
+    }
+  },
     /* постоянное отслеживание изменений и обновление */
     server: {
       watch: {
