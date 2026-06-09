@@ -1,0 +1,144 @@
+.hero {
+    &__swiper {
+        height: 600px;
+        width: 100%;
+
+        @include vp-767 {
+            height: 354px;
+        }
+    }
+
+    &__picture,
+    &__img {
+        width: 100%;
+        height: 600px;
+        display: block;
+        object-fit: cover;
+
+        @include vp-767 {
+            height: 354px;
+        }
+    }
+
+    &__body {
+        color: $color-white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 39px;
+
+        @include vp-767 {
+            transform: none;
+            top: unset;
+            left: 16px;
+            bottom: 24px;
+        }
+
+        &-title {
+            margin: 0 0 16px;
+
+            @include vp-767 {
+                margin: 0 0 3px;
+            }
+        }
+
+        &-pricing {
+            font-size: 26px;
+            line-height: 35px;
+            margin: 0 0 48px;
+
+            @include vp-767 {
+                font-size: 14px;
+                line-height: 22px;
+                margin: 0 0 10px;
+            }
+        }
+
+        &-button {
+            font-weight: 700;
+            font-size: 20px;
+            color: $color-white;
+            padding: 13px 32px;
+            border: 2px solid $color-white;
+            border-radius: 6px;
+            background-color: transparent;
+
+            &:hover {
+                color: $color-black;
+                background-color: $color-white;
+                border-color: $color-white;
+            }
+
+            @include vp-767 {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+                padding: 6px 9px;
+                border: 1px solid;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+/* styles for SwiperVUE */
+.swiper {
+    margin: 0 0 64px;
+
+    @include vp-767 {
+        margin: 0 0 27px;
+    }
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+
+    @include vp-767 {
+        height: 354px;
+    }
+
+    &-wrapper,
+    &-slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-pagination {
+        position: absolute;
+        display: flex;
+        gap: 7px;
+        justify-content: center;
+        align-items: center;
+        --swiper-pagination-bottom: 24px;
+
+        @include vp-767 {
+            --swiper-pagination-bottom: 10px;
+            gap: 0;
+        }
+
+        &-bullet {
+            --swiper-pagination-bullet-inactive-color: #{$color-white};
+            --swiper-pagination-bullet-inactive-opacity: transparent;
+
+            @include vp-767 {
+                --swiper-pagination-bullet-width: 4px;
+                --swiper-pagination-bullet-height: 4px;
+            }
+
+            &-active {
+                --swiper-theme-color: transparent;
+                border: 1px solid $color-white;
+                border-radius: 50%;
+                --swiper-pagination-bullet-width: 17px;
+                --swiper-pagination-bullet-height: 17px;
+
+                @include vp-767 {
+                    --swiper-pagination-bullet-width: 9px;
+                    --swiper-pagination-bullet-height: 9px;
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@
 
 <style lang='scss'>
 .default-layout {
-    box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   min-height: 100vh;
   max-width: 1440px;

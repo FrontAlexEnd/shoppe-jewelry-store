@@ -3,7 +3,7 @@
 <template>
   <div>
     <div>
-      <h1>Тест: Nuxt работает</h1>
+      <h1>Nuxt показывают каталог</h1>
     </div>
   </div>
 </template>

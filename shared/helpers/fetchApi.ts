@@ -1,6 +1,4 @@
-import { useUiStore } from '@stores/UiStore'
-
-export async function getApiCards<T>(API: string): Promise<T> { 
+export async function fetchApi<T>(API: string): Promise<T> { 
     const uiStore = useUiStore()
     uiStore.startLoading()
     
