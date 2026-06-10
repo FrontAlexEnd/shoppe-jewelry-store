@@ -31,7 +31,7 @@
             transform: none;
             top: unset;
             left: 16px;
-            bottom: 24px;
+            bottom: 45px;
         }
 
         &-title {
@@ -82,63 +82,68 @@
 }
 
 /* styles for SwiperVUE */
-.swiper {
+.hero__swiper.swiper {
     margin: 0 0 64px;
-
-    @include vp-767 {
-        margin: 0 0 27px;
-    }
-
     height: 100%;
     width: 100%;
     object-fit: cover;
     position: relative;
 
     @include vp-767 {
+        margin: 0 0 27px;
         height: 354px;
     }
 
-    &-wrapper,
-    &-slide {
+    :deep(.swiper-wrapper),
+    :deep(.swiper-slide) {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    &-pagination {
+    :deep(.swiper-pagination) {
         position: absolute;
         display: flex;
-        gap: 7px;
+        gap: 15px;
         justify-content: center;
         align-items: center;
-        --swiper-pagination-bottom: 24px;
+        bottom: 24px;
 
         @include vp-767 {
-            --swiper-pagination-bottom: 10px;
-            gap: 0;
+            bottom: 10px;
+            gap: 10px;
         }
+    }
 
-        &-bullet {
-            --swiper-pagination-bullet-inactive-color: #{$color-white};
-            --swiper-pagination-bullet-inactive-opacity: transparent;
+    :deep(.swiper-pagination-bullet) {
+        box-sizing: border-box;
+        margin: 0;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        opacity: 1;
+        transform: none;
+        border: 1px solid $color-white;
+        border-radius: 50%;
+        transition: width 0.2s ease, height 0.2s ease;
 
-            @include vp-767 {
-                --swiper-pagination-bullet-width: 4px;
-                --swiper-pagination-bullet-height: 4px;
-            }
+        @include vp-767 {
+            width: 13px;
+            height: 13px;
+        }
+    }
 
-            &-active {
-                --swiper-theme-color: transparent;
-                border: 1px solid $color-white;
-                border-radius: 50%;
-                --swiper-pagination-bullet-width: 17px;
-                --swiper-pagination-bullet-height: 17px;
+    :deep(.swiper-pagination-bullet-active) {
+        opacity: 1;
+        background-color: $color-white;
+        border-radius: 50%;
+        transform: none;
+        width: 12px;
+        height: 12px;
 
-                @include vp-767 {
-                    --swiper-pagination-bullet-width: 9px;
-                    --swiper-pagination-bullet-height: 9px;
-                }
-            }
+        @include vp-767 {
+            width: 8px;
+            height: 8px;
         }
     }
 }
