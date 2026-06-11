@@ -38,16 +38,16 @@ const burgerMenuClasses = computed(() => {
 <template>
     <header :class="headerClasses">
         <div :class="headerInnerClasses">
-            <RouterLink class="header__logo logo" to="/">
+            <NuxtLink class="header__logo logo" to="/">
                 <img class="logo__image" src="/favicon/logo.svg" alt="Shoppe store logo" width="135" height="40" />
-            </RouterLink>
+            </NuxtLink>
             <div class="header__right">
                 <nav class="header__menu">
                     <ul class="header__menu-list">
                         <li class="header__menu-item">
-                            <RouterLink :class="linkClasses" to="/catalog">
+                            <NuxtLink :class="linkClasses" to="/catalog">
                                 Shop
-                            </RouterLink>
+                            </NuxtLink>
                         </li>
                     </ul>
                 </nav>
@@ -73,8 +73,8 @@ const burgerMenuClasses = computed(() => {
         </div>
         <nav :class="burgerMenuClasses">
             <div class="burger-menu__top">
-                <RouterLink class="burger-menu__link" to="/">Home</RouterLink>
-                <RouterLink class="burger-menu__link" to="/catalog">Shop</RouterLink>
+                <NuxtLink class="burger-menu__link" to="/">Home</NuxtLink>
+                <NuxtLink class="burger-menu__link" to="/catalog">Shop</NuxtLink>
             </div>
             <a @click="closeBurgerMenu" class="burger-menu__link" href="#">
                 <img src="/icons/profile.svg" width="20" height="20" alt="Profile icon">

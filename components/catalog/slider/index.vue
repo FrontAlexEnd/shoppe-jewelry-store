@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Slide } from './types.ts'
 /* imports for swiper.vue */
 import { Pagination, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -11,10 +12,19 @@ const MAX_WIDTH = 767
 
 const modules = [Pagination, Autoplay]
 
-const { data: slidesData } = useAsyncData('slider-slides', () => {
-    return fetchApi<{ data: Slide[] }>(API.SLIDES)
+const { data: slidesData, error } = useAsyncData<{ data: Slide[] }>('slider-slides', () => 
+    fetchApi<{ data: Slide[] }>(API.SLIDES), 
+    {
+        getCachedData: (key, nuxtApp) => nuxtApp.payload.data[key] || nuxtApp.static.data[key]
+    }   
+)
+
+if (error.value) console.error('Error fetch slider slides: ', error)
+
+const slides = computed(() => {
+    if(error.value) return []
+    return slidesData.value?.data
 })
-const slides = computed(() => slidesData.value?.data ?? [])
 </script>
 
 <template>
